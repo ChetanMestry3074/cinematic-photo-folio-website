@@ -33,7 +33,7 @@ const Hero = () => {
           className="w-full h-full object-cover object-center brightness-[1.2] contrast-[1.05]"
         >
           <source 
-            src="src\components\videobg.mp4" 
+            src="public\videobg.mp4" 
             type="video/mp4" 
           />
           {/* Fallback to image if video doesn't load */}
