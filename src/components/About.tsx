@@ -36,7 +36,7 @@ const About = () => {
             <div ref={imageRef} className="relative z-10 overflow-hidden rounded-lg shadow-xl parallax">
               <div className="absolute "></div>
               <img
-                src="src\components\images\20241030_124033 (1) (1).jpg"
+                src="public\profile.jpg"
                 alt="Photographer"
                 className="w-full h-[500px] object-cover object-top z-0"
               />

@@ -10,6 +10,7 @@ import Categories from "@/components/Categories";
 import FeaturedPhotos from "@/components/FeaturedPhotos";
 import Editing from "@/components/Editing";
 
+
 const Index = () => {
   const location = useLocation();
   const sectionsRef = useRef<HTMLDivElement>(null);
