@@ -5,8 +5,6 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 
-import logo from "@/components/images/edits/logo.png";
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,38 +43,62 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link to="/" className="flex items-center">
-          <img src={logo} alt="CM Visuals Logo" className="h-14 w-auto" />
-        </Link>
+
+        <button
+  onClick={() => {
+    if (window.location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: "hero" } });
+    } else {
+      document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+  className="flex items-center focus:outline-none"
+  aria-label="Scroll to Hero Section"
+>
+  <img src="/logo.png" alt="CM Visuals Logo" className="h-14 w-auto" />
+</button>
+
 
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <button 
             onClick={() => handleNavigation("categories")}
-            className="hover:text-film-500 dark:hover:text-film-300 transition-colors"
+            className={cn( "transition-colors font-medium",
+                            !isScrolled ? "text-white" : "text-black dark:text-white"
+                          )}
           >
             Gallery
           </button>
           <button 
             onClick={() => handleNavigation("editing")}
-            className="hover:text-film-500 dark:hover:text-film-300 transition-colors"
+            className={cn("transition-colors font-medium",
+                            !isScrolled ? "text-white" : "text-black dark:text-white"
+                          )}
           >
             Services
           </button>
           <button 
             onClick={() => handleNavigation("about")}
-            className="hover:text-film-500 dark:hover:text-film-300 transition-colors"
+            className={cn("transition-colors font-medium",
+                            !isScrolled ? "text-white" : "text-black dark:text-white"
+                          )}
           >
             About
           </button>
-          <Button 
-            variant="outline" 
-            className="border-film-300" 
-            onClick={() => handleNavigation("contact")}
-          >
-            Contact
-          </Button>
+          <Button
+  variant="outline"
+  className={cn(
+    "transition-all duration-300 font-medium",
+    !isScrolled
+      ? "border-white text-white bg-transparent hover:bg-white hover:text-black"
+      : "text-black dark:text-white border-film-300 hover:bg-black/5 dark:hover:bg-white/10"
+  )}
+  onClick={() => handleNavigation("contact")}
+>
+  Contact
+</Button>
+
         </div>
 
         {/* Mobile Menu Button */}

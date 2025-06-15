@@ -18,7 +18,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Shutter Animation */}
       <ShutterAnimation onAnimationComplete={handleAnimationComplete} />
       
@@ -30,10 +30,11 @@ const Hero = () => {
           muted 
           loop 
           playsInline
+          preload="auto" 
           className="w-full h-full object-cover object-center brightness-[1.2] contrast-[1.05]"
         >
           <source 
-            src="public\videobg.mp4" 
+            src="/videobg.mp4" 
             type="video/mp4" 
           />
           {/* Fallback to image if video doesn't load */}

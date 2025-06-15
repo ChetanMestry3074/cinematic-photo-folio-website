@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import family1 from "@/components/images/Family/1.jpg";
-import product8 from "@/components/images/Product/8.jpg";
-import product9 from "@/components/images/Product/9.jpg";
-import architecture1 from "@/components/images/Architecture/1.jpg";
-import portrait12 from "@/components/images/Portrait/19.jpg";
-import architecture2 from "@/components/images/Architecture/2.jpg";
+import family1 from "@/components/images/featured/1.jpg";
+import product8 from "@/components/images/featured/p8.jpg";
+import product9 from "@/components/images/featured/p9.jpg";
+import architecture1 from "@/components/images/featured/a1.jpg";
+import portrait12 from "@/components/images/featured/19.jpg";
+import architecture2 from "@/components/images/featured/2.jpg";
 
 const featuredPhotos = [
   {

@@ -3,19 +3,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 
-import architecture1 from "@/components/images/Architecture/9.jpg";
-import portrait1 from "@/components/images/Portrait/17.jpg";
-import meet12 from "@/components/images/Meets/12.jpg";
-import family8 from "@/components/images/Family/8.jpg";
-import product8 from "@/components/images/Product/8.jpg";
-import land11 from "@/components/images/Landscape/8.jpg";
+import architecture1 from "@/components/images/featured/9.jpg";
+import portrait1 from "@/components/images/featured/17.jpg";
+import meet12 from "@/components/images/featured/12.jpg";
+import family8 from "@/components/images/featured/8.jpg";
+import product8 from "@/components/images/featured/p8.jpg";
+import land11 from "@/components/images/featured/l8.jpg";
 // Define categories with their images
 const categories = [
   {
     id: "architecture",
     title: "Architecture",
     image: architecture1,
-    description: "Stunning architectural photography capturing the beauty of buildings and structures"
+    description: "Capturing the beauty and design of built structures through a cinematic lens"
   },
   {
     id: "portraits",
@@ -39,7 +39,7 @@ const categories = [
     id: "product-shoot",
     title: "Product Shoot",
     image: product8,
-    description: "Showcasing products with stunning professional photography"
+    description: "Professional product photography for ecommerce, marketing and advertising"
   },
   {
     id: "nature",
@@ -62,7 +62,7 @@ const Categories = () => {
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {categories.map((category, index) => (
             <ScrollReveal key={category.id} delay={index * 100}>
               <Link 
